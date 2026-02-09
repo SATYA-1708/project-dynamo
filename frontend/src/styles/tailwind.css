@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #2563EB; /* Professional blue (primary) - blue-600 */
+    --color-primary-50: #EFF6FF; /* Light blue (50-level shade) - blue-50 */
+    --color-primary-100: #DBEAFE; /* Light blue (100-level shade) - blue-100 */
+    --color-primary-500: #3B82F6; /* Medium blue (500-level shade) - blue-500 */
+    --color-primary-600: #2563EB; /* Primary blue (600-level shade) - blue-600 */
+    --color-primary-700: #1D4ED8; /* Dark blue (700-level shade) - blue-700 */
+    --color-primary-900: #1E3A8A; /* Very dark blue (900-level shade) - blue-900 */
+
+    /* Secondary Colors */
+    --color-secondary: #64748B; /* Sophisticated slate (secondary) - slate-500 */
+    --color-secondary-50: #F8FAFC; /* Light slate (50-level shade) - slate-50 */
+    --color-secondary-100: #F1F5F9; /* Light slate (100-level shade) - slate-100 */
+    --color-secondary-200: #E2E8F0; /* Light slate (200-level shade) - slate-200 */
+    --color-secondary-300: #CBD5E1; /* Light slate (300-level shade) - slate-300 */
+    --color-secondary-400: #94A3B8; /* Medium slate (400-level shade) - slate-400 */
+    --color-secondary-500: #64748B; /* Secondary slate (500-level shade) - slate-500 */
+    --color-secondary-600: #475569; /* Dark slate (600-level shade) - slate-600 */
+    --color-secondary-700: #334155; /* Dark slate (700-level shade) - slate-700 */
+    --color-secondary-800: #1E293B; /* Very dark slate (800-level shade) - slate-800 */
+    --color-secondary-900: #0F172A; /* Near black slate (900-level shade) - slate-900 */
+
+    /* Accent Colors */
+    --color-accent: #059669; /* Success-oriented emerald (accent) - emerald-600 */
+    --color-accent-50: #ECFDF5; /* Light emerald (50-level shade) - emerald-50 */
+    --color-accent-100: #D1FAE5; /* Light emerald (100-level shade) - emerald-100 */
+    --color-accent-500: #10B981; /* Medium emerald (500-level shade) - emerald-500 */
+    --color-accent-600: #059669; /* Accent emerald (600-level shade) - emerald-600 */
+    --color-accent-700: #047857; /* Dark emerald (700-level shade) - emerald-700 */
+
+    /* Background Colors */
+    --color-background: #FAFAFA; /* Warm off-white background - gray-50 */
+    --color-surface: #FFFFFF; /* Pure white surface - white */
+
+    /* Text Colors */
+    --color-text-primary: #0F172A; /* Near-black primary text - slate-900 */
+    --color-text-secondary: #475569; /* Medium gray secondary text - slate-600 */
+
+    /* Status Colors */
+    --color-success: #10B981; /* Clear positive feedback - emerald-500 */
+    --color-success-50: #ECFDF5; /* Light success (50-level shade) - emerald-50 */
+    --color-success-100: #D1FAE5; /* Light success (100-level shade) - emerald-100 */
+    --color-success-600: #059669; /* Dark success (600-level shade) - emerald-600 */
+
+    --color-warning: #F59E0B; /* Attention-grabbing amber - amber-500 */
+    --color-warning-50: #FFFBEB; /* Light warning (50-level shade) - amber-50 */
+    --color-warning-100: #FEF3C7; /* Light warning (100-level shade) - amber-100 */
+    --color-warning-600: #D97706; /* Dark warning (600-level shade) - amber-600 */
+
+    --color-error: #EF4444; /* Decisive red error - red-500 */
+    --color-error-50: #FEF2F2; /* Light error (50-level shade) - red-50 */
+    --color-error-100: #FEE2E2; /* Light error (100-level shade) - red-100 */
+    --color-error-600: #DC2626; /* Dark error (600-level shade) - red-600 */
+
+    /* Border Colors */
+    --color-border: #E2E8F0; /* Minimal border color - slate-200 */
+    --color-border-light: #F1F5F9; /* Light border color - slate-100 */
+
+    /* Shadow Colors */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-100 text-secondary-700 hover:bg-secondary-200 focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-surface border border-border rounded-lg shadow-sm;
+  }
+
+  .input-field {
+    @apply border border-border rounded-md px-3 py-2 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200;
+  }
+}
